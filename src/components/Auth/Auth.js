@@ -51,7 +51,7 @@ const Auth = props => {
             await dispatch(allAction.userAction.loginUser(response.data));
             console.log(response.data)
 
-            const tokenUrl = `http://skku-milab.ddns.net:5000/api/create`;
+            const tokenUrl = `https://ngs-qr-server.herokuapp.com/api/create`;
             // const tokenUrl = `http://skku-milab.ddns.net:5000/api/create`;
             const tokenData = response.data.access_token;
             const tokenCofing = {
