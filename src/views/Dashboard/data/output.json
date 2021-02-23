@@ -1,0 +1,199 @@
+[
+  {
+      "resourceType": "MolecularSequence",
+      "id": "0",
+      "extension": [
+        {
+          "url": "http://example.org/fhir/StructureDefinition/QcMetrics",
+          "extension": [
+            {
+              "url": "sequencingType",
+              "extension": [
+                {
+                  "url": "sequencingType",
+                  "valueString": "Target gene sequencing"
+                },
+                {
+                  "url": "targetGene",
+                  "valueString": "cancer_v1.1"
+                }
+              ]
+            },
+            {
+              "url": "sampleInformation",
+              "extension": [
+                {
+                  "url": "specimenType",
+                  "valueString": "Cell Line"
+                },
+                {
+                  "url": "samplingDate",
+                  "valueString": "2014-05-15"
+                },
+                {
+                  "url": "cellline",
+                  "valueString": "U-118MG"
+                }
+              ]
+            },
+            {
+              "url": "dnaExtraction",
+              "extension": [
+                {
+                  "url": "dnaExtractionKit",
+                  "valueString": "qiagen allprep DNA/RNA mini kit"
+                },
+                {
+                  "url": "dnaPurity",
+                  "extension": [
+                    {
+                      "url": "od260280",
+                      "valueDecimal": 2.1
+                    },
+                    {
+                      "url": "od260230",
+                      "valueDecimal": 2.3
+                    }
+                  ]
+                },
+                {
+                  "url": "dnaIntegrity",
+                  "valueDecimal": 60000
+                }
+              ]
+            },
+            {
+              "url": "libraryConstruction",
+              "extension": [
+                {
+                  "url": "libraryInputAmount",
+                  "valueDecimal": 250
+                },
+                {
+                  "url": "libraryInsertSize",
+                  "valueDecimal": 344
+                },
+                {
+                  "url": "libraryConstructionKit",
+                  "valueString": "agilent sureselect xt custom kit"
+                }
+              ]
+            },
+            {
+              "url": "sequencingInformation",
+              "extension": [
+                {
+                  "url": "sequenceInstrument",
+                  "valueString": "HiSeq2500"
+                },
+                {
+                  "url": "readLength",
+                  "valueDecimal": 100
+                },
+                {
+                  "url": "sequencingDirection",
+                  "valueString": "Paired end sequencing"
+                },
+                {
+                  "url": "runningMode"
+                }
+              ]
+            },
+            {
+              "url": "runningQuality",
+              "extension": [
+                {
+                  "url": "errorRate"
+                },
+                {
+                  "url": "percentDataQualityQ30"
+                }
+              ]
+            },
+            {
+              "url": "dataQuality",
+              "extension": [
+                {
+                  "url": "totalReads",
+                  "valueDecimal": 5686022
+                },
+                {
+                  "url": "meanCoverage",
+                  "valueDecimal": 814.7
+                },
+                {
+                  "url": "uniformity",
+                  "valueDecimal": 0.08
+                },
+                {
+                  "url": "onTargetRate",
+                  "valueDecimal": 0.645018
+                },
+                {
+                  "url": "q30",
+                  "valueDecimal": 92.9
+                },
+                {
+                  "url": "prScore",
+                  "valueDecimal": 93.98
+                }
+              ]
+            },
+            {
+              "url": "sequencingAlignment",
+              "extension": [
+                {
+                  "url": "mappingAlgorithm",
+                  "valueString": "-M -t 4 hg19.fa INPUT_R1.fq INPUT_R2.fq"
+                },
+                {
+                  "url": "software",
+                  "valueString": "BWA-MEM (v.0.7.5)"
+                }
+              ]
+            },
+            {
+              "url": "variantCalling",
+              "extension": [
+                {
+                  "url": "software",
+                  "valueString": "LoFreq (v.0.6.1) | MuTect (v.2.5)"
+                },
+                {
+                  "url": "qualityScore"
+                },
+                {
+                  "url": "allelicReadPercentage"
+                }
+              ]
+            },
+            {
+              "url": "variantFilteringAndAnnotation",
+              "extension": [
+                {
+                  "url": "germlineFilterCriteria"
+                },
+                {
+                  "url": "referenceDB",
+                  "valueString": "hg19"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "identifier": [
+        {
+          "system": "http://129.150.178.10:8080/qms/",
+          "value": "CS11_14_00006"
+        }
+      ],
+      "performer": [
+        {
+          "value": "P3000007"
+        }
+      ],
+      "type": "dna",
+      "coordinateSystem": 1
+    }
+]
