@@ -31,7 +31,7 @@ const Auth = props => {
       const data = {
         code: code,
         grant_type: 'authorization_code',
-        redirect_uri: "http://ngs-qr.herokuapp.com/admin/auth"
+        redirect_uri: "https://ngs-qr.herokuapp.com/admin/auth"
         // redirect_uri: "http://skku-milab.ddns.net:3300/admin/auth"
       };
       const clientInfo = Buffer.from(
