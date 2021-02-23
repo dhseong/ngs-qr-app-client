@@ -183,8 +183,8 @@ export default function Dashboard() {
     }
     const config = {
       headers: {
-        "Content-Type": "application/fhir+json",
-        Authorization: `Bearer ${token}`,
+        // "Content-Type": "application/fhir+json",
+        Authorization: `Bearer ${token}`
       },
       withCredentials: true
     };
