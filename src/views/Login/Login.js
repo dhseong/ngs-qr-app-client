@@ -17,8 +17,10 @@ export default function UserProfile() {
   const clientId = "syBsssojJQ4XR7Ki"
   const response_type = "code"
   const redirect_uri = "https://ngs-qr.herokuapp.com/admin/auth"
-  // const redirect_uri = "http://skku-milab.ddns.net:3300/admin/auth"
-  const oauth2Url = `https://oauth2svr.herokuapp.com/oauth2/authorize?client_id=${clientId}&response_type=${response_type}&redirect_uri=${redirect_uri}`;
+  const email_address = "ngsqr@email.com"
+  const password = "11111"
+  // const oauth2Url = `https://oauth2svr.herokuapp.com/oauth2/authorize?client_id=${clientId}&response_type=${response_type}&redirect_uri=${redirect_uri}`;
+  const oauth2Url = `https://oauth2svr.herokuapp.com/oauth2/authorize?client_id=${clientId}&response_type=${response_type}&redirect_uri=${redirect_uri}&email=${email_address}&password=${password}`;
 
   return (
     <div>
