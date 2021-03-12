@@ -1,2 +1,5 @@
-# ngs-qr-app-client
- NGS Quality Reporting App
+# NGS Quality Reporting (NGS-QR App)
+
+Next Generation Sequencing (NGS) technology has been rapidly adopted in clinical practice, and the scope of clinical NGS applications has been extended to early diagnosis, disease classification, and treatment planning. As the number of requests for NGS genomic testing increases, substantial efforts have been made to deliver the testing results clearly and unambiguously. For the legitimacy of clinical NGS genomic testing, quality information from the process of producing genomic data should be included within the results. However, most reports provide insufficient quality information to confirm the reliability of genomic testing due to the complexity of the NGS process.
+
+We developed an NGS Quality Reporting (NGS-QR) app, a Fast Healthcare Interoperability Resources (FHIR) based web application, to report and manage the quality information of clinical NGS genomic tests. As the demand for NGS genomic testing increases and genomic data accumulates, quality information can be used as reference materials to improve the quality of testing. It could also motivate laboratories to perform diagnostic tests to provide high-quality genomic data.
