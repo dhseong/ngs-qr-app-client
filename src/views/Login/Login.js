@@ -30,8 +30,6 @@ export default function UserProfile() {
       .get(url)
       .then(async response => {
         if (response.status === 200) {
-          console.log(response.data)
-
           const clientUrl = "https://ngs-qr-server.herokuapp.com/api/client";
           const clientData = response.data
           const clientConfig = {
@@ -44,22 +42,22 @@ export default function UserProfile() {
             .post(clientUrl, clientData, clientConfig)
             .then(response => {
               if (response.status === 200) {
-                console.log("Client IP saved")
+                // console.log("Client IP saved")
               }
             })
             .catch(err => {
-              console.log('MongoDB error:', err);
+              // console.log('Error:', err);
             })
         } else {
-        console.log('error');
+        // console.log('error');
         }
       })
       .catch(err => {
-        console.log('error is : ', err);
+        // console.log('error is : ', err);
       });
   };
   getIp().then(r => {
-    console.log("Saved")
+    // console.log("Saved")
   });
 
 
