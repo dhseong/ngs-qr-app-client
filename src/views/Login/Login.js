@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 import {Box} from '@material-ui/core';
 import {makeStyles} from "@material-ui/core/styles";
 import GridItem from "components/Grid/GridItem.js";
@@ -21,6 +22,46 @@ export default function UserProfile() {
   const password = "11111"
   // const oauth2Url = `https://oauth2svr.herokuapp.com/oauth2/authorize?client_id=${clientId}&response_type=${response_type}&redirect_uri=${redirect_uri}`;
   const oauth2Url = `https://oauth2svr.herokuapp.com/oauth2/authorize?client_id=${clientId}&response_type=${response_type}&redirect_uri=${redirect_uri}&email=${email_address}&password=${password}`;
+
+  const getIp = async () => {
+    const url = "https://ipapi.co/json/";
+
+    await axios
+      .get(url)
+      .then(async response => {
+        if (response.status === 200) {
+          console.log(response.data)
+
+          const clientUrl = "https://ngs-qr-server.herokuapp.com/api/client";
+          const clientData = response.data
+          const clientConfig = {
+            headers: {
+              "Content-Type": "application/json"
+            }
+          }
+
+          await axios
+            .post(clientUrl, clientData, clientConfig)
+            .then(response => {
+              if (response.status === 200) {
+                console.log("Client IP saved")
+              }
+            })
+            .catch(err => {
+              console.log('MongoDB error:', err);
+            })
+        } else {
+        console.log('error');
+        }
+      })
+      .catch(err => {
+        console.log('error is : ', err);
+      });
+  };
+  getIp().then(r => {
+    console.log("Saved")
+  });
+
 
   return (
     <div>

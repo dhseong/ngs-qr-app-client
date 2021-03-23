@@ -54,7 +54,7 @@ const Auth = props => {
             const tokenUrl = `https://ngs-qr-server.herokuapp.com/api/create`;
             // const tokenUrl = `http://skku-milab.ddns.net:5000/api/create`;
             const tokenData = response.data.access_token;
-            const tokenCofing = {
+            const tokenConfig = {
               headers: {
                 "Content-Type": "application/json"
               },
@@ -62,7 +62,7 @@ const Auth = props => {
             }
 
             await axios
-              .post(tokenUrl, tokenData, tokenCofing)
+              .post(tokenUrl, tokenData, tokenConfig)
               .then(response => {
                 if (response.status === 200) {
                   console.log("Token saved")
