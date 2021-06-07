@@ -191,9 +191,9 @@ export default function Dashboard() {
     const config = {
       headers: {
         "Content-Type": "application/fhir+json",
-        Authorization: `Bearer ${token}`
+        // Authorization: `Bearer ${token}`
       },
-      withCredentials: true
+      // withCredentials: true
     };
     const fetchData = async () => {
       await Axios
