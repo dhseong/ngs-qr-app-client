@@ -22,23 +22,25 @@ export default function AdminNavbarLinks() {
 
   return (
     <div>
-      {currentUser.login ? (
+      {
+      //   currentUser.login ? (
+      //   <div className={classes.manager}>
+      //     <Link to="/admin/login">
+      //       <Button color="white" aria-label="edit" onClick={handleClickLogOut}>
+      //         LOG OUT
+      //       </Button>
+      //     </Link>
+      //   </div>
+      // ) : (
         <div className={classes.manager}>
-          <Link to="/admin/login">
-            <Button color="white" aria-label="edit" onClick={handleClickLogOut}>
-              LOG OUT
-            </Button>
-          </Link>
-        </div>
-      ) : (
-        <div className={classes.manager}>
-          <Link to="/admin/login">
+          {/*<Link to="/admin/login">*/}
             <Button color="white" aria-label="edit">
               LOG IN
             </Button>
-          </Link>
+          {/*</Link>*/}
         </div>
-      )}
+      // )
+      }
     </div>
   );
 }

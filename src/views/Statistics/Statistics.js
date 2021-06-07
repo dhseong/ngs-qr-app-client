@@ -21,6 +21,10 @@ export default function Icons() {
   // states and functions
   const currentUser = useSelector(state => state.currentUser);
 
+  // Temporary
+  currentUser.login = 'LOG_IN'
+  // Temporary
+
   return (
     <div>
       {!currentUser.login ? (

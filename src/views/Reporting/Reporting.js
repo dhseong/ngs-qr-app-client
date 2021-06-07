@@ -460,11 +460,17 @@ export default function Reporting() {
   let reportJson = JSON.stringify(reportObj);
 
   const url = `https://skku-milab.ddns.net:9080/fhir/MolecularSequence`
+  // const url = `https://skku-milab.ddns.net:9080/fhir/MolecularSequence`
   // const url = `http://192.168.0.129:9080/fhir/MolecularSequence`
   let token = ""
-  if (currentUser.login) {
-    token = currentUser.user.access_token.value
-  }
+
+  // Temporary
+  currentUser.login = 'LOG_IN'
+  // if (currentUser.login) {
+  //   token = currentUser.user.access_token.value
+  // }
+  // Temporary
+
   const config = {
     headers: {
       "Content-Type": "application/fhir+json",
@@ -506,11 +512,12 @@ export default function Reporting() {
 
   return (
     <div>
-      {!currentUser.login ? (
-        <div>
-          <Redirect to="/admin/login"/>
-        </div>
-      ) : (
+      {
+      //   !currentUser.login ? (
+      //   <div>
+      //     <Redirect to="/admin/login"/>
+      //   </div>
+      // ) : (
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>
             <Card>
@@ -1463,7 +1470,8 @@ export default function Reporting() {
             </Card>
           </GridItem>
         </GridContainer>
-      )}
+      // )
+      }
     </div>
   );
 }

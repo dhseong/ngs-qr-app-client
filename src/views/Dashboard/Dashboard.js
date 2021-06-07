@@ -175,15 +175,22 @@ export default function Dashboard() {
   });
 
   React.useEffect(() => {
-    const url = `https://skku-milab.ddns.net:9080/fhir/MolecularSequence`
+    const url = `http://skku-milab.ddns.net:9080/fhir/MolecularSequence`
+    // const url = `https://skku-milab.ddns.net:9080/fhir/MolecularSequence`
     // const url = `http://192.168.0.129:9080/fhir/MolecularSequence`
     let token = ""
-    if (currentUser.login) {
-      token = currentUser.user.access_token.value
-    }
+
+    // Temporary
+    currentUser.login = 'LOG_IN'
+    // if (currentUser.login) {
+    //   token = currentUser.user.access_token.value
+    // }
+    // Temporary
+
+
     const config = {
       headers: {
-        // "Content-Type": "application/fhir+json",
+        "Content-Type": "application/fhir+json",
         Authorization: `Bearer ${token}`
       },
       withCredentials: true
@@ -422,11 +429,12 @@ export default function Dashboard() {
 
   return (
     <div>
-      {!currentUser.login ? (
-        <div>
-          <Redirect to="/admin/login"/>
-        </div>
-      ) : (
+      {
+      //   !currentUser.login ? (
+      //   <div>
+      //     <Redirect to="/admin/login"/>
+      //   </div>
+      // ) : (
         <div>
           <GridContainer>
             <GridItem xs={12} sm={6} md={6}>
@@ -576,7 +584,8 @@ export default function Dashboard() {
             </GridItem>
           </GridContainer>
         </div>
-      )}
+      // )
+      }
     </div>
   );
 }
